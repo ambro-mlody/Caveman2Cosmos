@@ -167,6 +167,7 @@ public:
 	const wchar_t* getHotKeyDescriptionKey() const;
 	const wchar_t* getHotKeyAltDescriptionKey() const;
 	const wchar_t* getHotKeyString() const;
+	std::wstring pyGetHotKeyString() const { return getHotKeyString(); }
 
 	std::wstring getHotKeyDescription() const;
 	void setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString);
@@ -1741,7 +1742,6 @@ public:
 	bool isNoBadGoodies() const;
 	bool isOnlyDefensive() const;
 	bool isNoCapture() const;
-	bool isQuickCombat() const;
 	bool isRivalTerritory() const;
 	bool isMilitaryHappiness() const;
 	bool isMilitarySupport() const;
@@ -2370,7 +2370,6 @@ private:
 	bool m_bNoBadGoodies;
 	bool m_bOnlyDefensive;
 	bool m_bNoCapture;
-	bool m_bQuickCombat;
 	bool m_bRivalTerritory;
 	bool m_bMilitaryHappiness;
 	bool m_bMilitarySupport;
@@ -4127,6 +4126,7 @@ public:
 	bool isNoAdjacent() const;
 	bool isRequiresFlatlands() const;
 	bool isRequiresRiver() const;
+	inline bool isCoastalOnly() const { return m_bCoastalOnly; }
 	bool isAddsFreshWater() const;
 	bool isImpassable() const;
 	bool isNoCity() const;
@@ -4220,6 +4220,7 @@ private:
 	bool m_bNoAdjacent;
 	bool m_bRequiresFlatlands;
 	bool m_bRequiresRiver;
+	bool m_bCoastalOnly;
 	bool m_bAddsFreshWater;
 	bool m_bImpassable;
 	bool m_bNoCity;
@@ -4880,7 +4881,7 @@ private:
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 class CvMapInfo
-	: public CvInfoBase
+	: public CvHotkeyInfo
 	, private bst::noncopyable
 {
 public:

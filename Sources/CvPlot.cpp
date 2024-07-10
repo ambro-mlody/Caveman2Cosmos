@@ -298,6 +298,8 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_influencedByCityByPlayer.clear();
 	m_influencedByCityByPlayerLastTurn.clear();
 
+	m_aExtraYield.fill(0);
+
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -5155,7 +5157,7 @@ bool CvPlot::isVisibleEnemyDefender(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	return (plotCheck(PUF_canDefendEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner()) != NULL);
+	return isVisible(pUnit->getTeam(), false) && hasDefender(false, NO_PLAYER, pUnit->getOwner(), pUnit, true, false, false, true);
 }
 
 
@@ -5223,7 +5225,7 @@ bool CvPlot::isVisiblePotentialEnemyDefender(const CvUnit* pUnit) const
 {
 	PROFILE_FUNC();
 
-	if (pUnit != NULL && isVisible(pUnit->getTeam(), false))
+	if (pUnit && isVisible(pUnit->getTeam(), false))
 	{
 		return (plotCheck(PUF_canDefendPotentialEnemyAgainst, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner()) != NULL);
 	}
@@ -5327,40 +5329,26 @@ bool CvPlot::canHaveFeature(FeatureTypes eFeature, bool bOverExistingFeature) co
 	{
 		return true;
 	}
-	if (!bOverExistingFeature && getFeatureType() != NO_FEATURE)
+	if (!bOverExistingFeature
+	&& getFeatureType() != NO_FEATURE
+	|| getImprovementType() != NO_IMPROVEMENT
+	&& !GC.getImprovementInfo(getImprovementType()).getFeatureMakesValid(eFeature)
+	|| isPeak())
 	{
 		return false;
 	}
-	if (getImprovementType() != NO_IMPROVEMENT && !GC.getImprovementInfo(getImprovementType()).getFeatureMakesValid(eFeature))
-	{
-		return false;
-	}
-	if (isCity() || isPeak())
-	{
-		return false;
-	}
-
 	const CvFeatureInfo& feature = GC.getFeatureInfo(eFeature);
 
-	if (!feature.isTerrain(getTerrainType()))
-	{
-		return false;
-	}
-	if (feature.isNoBonus() && getBonusType() != NO_BONUS
-	||  feature.isNoCoast() && isCoastalLand()
-	||  feature.isNoRiver() && isRiver())
-	{
-		return false;
-	}
-	if (feature.isRequiresFlatlands() && isHills())
-	{
-		return false;
-	}
-	if (feature.isNoAdjacent() && algo::any_of(adjacent(), CvPlot::fn::getFeatureType() == eFeature))
-	{
-		return false;
-	}
-	if (feature.isRequiresRiver() && !isRiver())
+	if (feature.isNoCity() && isCity()
+	|| !feature.isTerrain(getTerrainType())
+	||  feature.isNoBonus() && getBonusType() != NO_BONUS
+	||  feature.isRequiresFlatlands() && isHills()
+	||  feature.isNoCoast() && isCoastal()
+	||  feature.isCoastalOnly() && !isCoastal()
+	||  feature.isNoRiver() && isRiver()
+	||  feature.isRequiresRiver() && !isRiver()
+	||  feature.isNoAdjacent()
+	&& algo::any_of(adjacent(), CvPlot::fn::getFeatureType() == eFeature))
 	{
 		return false;
 	}
@@ -5559,21 +5547,21 @@ bool CvPlot::isValidDomainForAction(const CvUnit& unit) const
 {
 	switch (unit.getDomainType())
 	{
-	case DOMAIN_SEA:
-		return (isWater() || unit.canMoveAllTerrain() || isCanMoveSeaUnits());
+		case DOMAIN_SEA:
+			return (isWater() || unit.canMoveAllTerrain() || isCanMoveSeaUnits());
 
-	case DOMAIN_AIR:
-		return false;
+		case DOMAIN_AIR:
+			return false;
 
-	case DOMAIN_LAND:
-		return (!isWater() || unit.canMoveAllTerrain() || isSeaTunnel());
+		case DOMAIN_LAND:
+			return (!isWater() || unit.canMoveAllTerrain() || isSeaTunnel());
 
-	case DOMAIN_IMMOBILE:
-		return (!isWater() || unit.canMoveAllTerrain());
+		case DOMAIN_IMMOBILE:
+			return (!isWater() || unit.canMoveAllTerrain());
 
-	default:
-		FErrorMsg("error");
-		return false;
+		default:
+			FErrorMsg("error");
+			return false;
 	}
 }
 
@@ -7935,6 +7923,17 @@ void CvPlot::recalculateBaseYield()
 }
 
 
+void CvPlot::setExtraYield(YieldTypes eYield, short iExtraYield)
+{
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
+	FAssertMsg(iExtraYield != 0, "Redundant function call");
+
+	m_aExtraYield[eYield] += iExtraYield;
+
+	updateYield();
+}
+
+
 short* CvPlot::getYield() const
 {
 	return m_aiYield;
@@ -8142,7 +8141,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	int iYield = (
 		calculateNatureYield(eYield, (ePlayer != NO_PLAYER) ? GET_PLAYER(ePlayer).getTeam() : NO_TEAM)
 		+
-		GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield)
+		m_aExtraYield[eYield]
 	);
 	bool bCity = false;
 
@@ -8525,12 +8524,12 @@ void CvPlot::setFoundValue(PlayerTypes eIndex, int iNewValue)
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	FASSERT_NOT_NEGATIVE(iNewValue);
 
-	if (NULL == m_aiFoundValue && 0 != iNewValue)
+	if (!m_aiFoundValue && 0 != iNewValue)
 	{
 		CvXMLLoadUtility::InitList<uint32_t>(&m_aiFoundValue, MAX_PLAYERS, 0);
 	}
 
-	if (NULL != m_aiFoundValue)
+	if (m_aiFoundValue)
 	{
 		FASSERT_NOT_NEGATIVE(iNewValue);
 		m_aiFoundValue[eIndex] = (uint32_t)iNewValue;
@@ -11313,6 +11312,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aExtraYield.c_array());
+	// @SAVEBREAK delete
+	foreach_(const YieldTypes eYield, YieldTypesRange())
+	{
+		m_aExtraYield[eYield] += GC.getGame().getPlotExtraYield(m_iX, m_iY, eYield);
+	}
+	// ! SAVEBREAK
+
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11679,6 +11686,8 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>(*it), "InfluencedByCityByPlayer");
 		}
 	}
+	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aExtraYield.c_array());
+
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -12227,10 +12236,10 @@ void CvPlot::applyEvent(EventTypes eEvent)
 
 	for (int i = 0; i < NUM_YIELD_TYPES; ++i)
 	{
-		int iChange = kEvent.getPlotExtraYield(i);
+		const int iChange = kEvent.getPlotExtraYield(i);
 		if (0 != iChange)
 		{
-			GC.getGame().setPlotExtraYield(m_iX, m_iY, (YieldTypes)i, iChange);
+			setExtraYield((YieldTypes)i, iChange);
 		}
 	}
 }
@@ -12576,156 +12585,136 @@ bool CvPlot::checkLateEra() const
 }
 
 // UncutDragon
-bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bTestCanFight) const
+bool CvPlot::hasDefender(
+	bool bCheckCanAttack,
+	PlayerTypes eOwner,
+	PlayerTypes eAttacker,
+	const CvUnit* pAttacker,
+	bool bTestAtWar,
+	bool bTestPotentialEnemy,
+	bool bTestCanMove,
+	bool bTestCanFight) const
 {
 	PROFILE_EXTRA_FUNC();
-	foreach_(const CvUnit* pLoopUnit, units())
+
+	foreach_(const CvUnit* unitX, units())
 	{
-		if (!pLoopUnit->isDead())
+		if (!unitX->isDead()
+		&& (eOwner == NO_PLAYER || unitX->getOwner() == eOwner)
+		&& (eAttacker == NO_PLAYER || !unitX->isInvisible(GET_PLAYER(eAttacker).getTeam(), false))
+		&& (
+				!bTestAtWar
+				||
+				eAttacker == NO_PLAYER
+				||
+				unitX->isEnemy(GET_PLAYER(eAttacker).getTeam(), this)
+				||
+				pAttacker
+				&&
+				pAttacker->isEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), this, unitX)
+			)
+		&& (!pAttacker || !unitX->canUnitCoexistWithArrivingUnit(*pAttacker))
+		&& (
+				!bTestPotentialEnemy
+				||
+				eAttacker == NO_PLAYER
+				||
+				unitX->isPotentialEnemy(GET_PLAYER(eAttacker).getTeam(), this)
+				||
+				pAttacker
+				&& pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), this, unitX)
+			)
+		&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo())
+		&& (!pAttacker || pAttacker->getDomainType() != DOMAIN_AIR || unitX->getDamage() < pAttacker->airCombatLimit(unitX))
+		&& (!bCheckCanAttack || !pAttacker || pAttacker->canAttack(*unitX))
+		&& (!bTestCanFight || unitX->canFight()))
 		{
-			if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwner() == eOwner))
-			{
-				if ((eAttackingPlayer == NO_PLAYER) || !(pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false)))
-				{
-					if (!bTestAtWar || eAttackingPlayer == NO_PLAYER || pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), this, pLoopUnit)))
-					{
-						if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
-						{
-							if (!bTestPotentialEnemy || (eAttackingPlayer == NO_PLAYER) || pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), this, pLoopUnit)))
-							{
-								if (!bTestCanMove || (pLoopUnit->canMove() && !(pLoopUnit->isCargo())))
-								{
-									if ((pAttacker == NULL) || (pAttacker->getDomainType() != DOMAIN_AIR) || (pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)))
-									{
-										if (!bCheckCanAttack || (pAttacker == NULL) || (pAttacker->canAttack(*pLoopUnit)))
-										{
-											if (!bTestCanFight || pLoopUnit->canFight())
-											{
-												// found a valid defender
-												return true;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+			return true; // found a valid defender
 		}
 	}
-
-	// there are no defenders
-	return false;
+	return false; // there are no defenders
 }
-bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
+
+bool CvPlot::hasStealthDefender(const CvUnit* victim, const bool bReveal)
 {
 	PROFILE_EXTRA_FUNC();
-	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
+	if (!victim
+	||  victim->getDomainType() == DOMAIN_AIR
+	|| !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return false;
 	}
-	const PlayerTypes eAttackingPlayer = pAttacker->getOwner();
-
-	foreach_(const CvUnit* pLoopUnit, units())
-	{
-		if (!pLoopUnit->isDead() && pLoopUnit->hasStealthDefense() && pLoopUnit->isInvisible(pAttacker->getTeam(), false, false) && !pLoopUnit->isCargo())
-		{
-			if (pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), this, pLoopUnit)))
-			{
-				if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
-				{
-					if (pLoopUnit->getImmobileTimer() < 1)
-					{
-						if (pAttacker->getDomainType() != DOMAIN_AIR)
-						{
-							if (pLoopUnit->canAttack(*pAttacker))
-							{
-								// found a valid defender
-								return true;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// there are no stealth defenders
-	return false;
-}
-void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
-{
-	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
-	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
+	foreach_(CvUnit* unitX, units())
 	{
-		return;
-	}
-	const PlayerTypes eAttackingPlayer = pAttacker->getOwner();
-
-	foreach_(CvUnit* pLoopUnit, units())
-	{
-		if (!pLoopUnit->isDead() && pLoopUnit->hasStealthDefense() && pLoopUnit->isInvisible(pAttacker->getTeam(), false, false) && !pLoopUnit->isCargo())
+		if (unitX->canStealthDefend(victim))
 		{
-			if (pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), this) || (NULL != pAttacker && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), this, pLoopUnit)))
+			// found a valid stealth defender
+			if (bReveal)
 			{
-				if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
+				const int iValue = unitX->AI_attackOdds(this, victim);
+				if (iValue >= iBestValue)
 				{
-					if (pLoopUnit->getImmobileTimer() < 1)
-					{
-						if (pAttacker->getDomainType() != DOMAIN_AIR)
-						{
-							if (pLoopUnit->canAttack(*pAttacker))
-							{
-								const int iValue = pLoopUnit->AI_attackOdds(this, pAttacker);
-								if (iValue >= iBestValue)
-								{
-									iBestValue = iValue;
-									pBestUnit = pLoopUnit;
-								}
-							}
-						}
-					}
+					iBestValue = iValue;
+					pBestUnit = unitX;
 				}
 			}
+			else return true;
 		}
 	}
-	if (pBestUnit != NULL)
+	if (pBestUnit)
 	{
 		pBestUnit->reveal();
 		updateCenterUnit();
 
-		CvWString szBuffer;
-		PlayerTypes eVisualDefender = pBestUnit->getVisualOwner(pAttacker->getTeam());
-
-		szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_DEFENSE_OWNER", pBestUnit->getNameKey(), GET_PLAYER(eAttackingPlayer).getNameKey(), pAttacker->getNameKey());
-		AddDLLMessage(pBestUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
-
-		szBuffer = gDLL->getText("TXT_KEY_MISC_STEALTH_DEFENSE", GET_PLAYER(eVisualDefender).getNameKey(), pBestUnit->getNameKey(), pAttacker->getNameKey());
-		AddDLLMessage(eAttackingPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT, pBestUnit->getButton(), GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true);
+		CvWString szBuffer = gDLL->getText(
+			"TXT_KEY_MISC_STEALTH_DEFENSE_OWNER",
+			pBestUnit->getNameKey(),
+			GET_PLAYER(victim->getOwner()).getNameKey(),
+			victim->getNameKey()
+		);
+		AddDLLMessage(
+			pBestUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+			szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT,
+			pBestUnit->getButton(), GC.getCOLOR_UNIT_TEXT(),
+			getX(), getY(), true, true
+		);
+		szBuffer = gDLL->getText(
+			"TXT_KEY_MISC_STEALTH_DEFENSE",
+			GET_PLAYER(pBestUnit->getVisualOwner(victim->getTeam())).getNameKey(),
+			pBestUnit->getNameKey(), victim->getNameKey()
+		);
+		AddDLLMessage(
+			victim->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+			szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_MINOR_EVENT,
+			pBestUnit->getButton(), GC.getCOLOR_UNIT_TEXT(),
+			getX(), getY(), true, true
+		);
+		return true; // revealed a stealth defender
 	}
+	return false; // there are no stealth defenders
 }
+
 
 void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 {
 	PROFILE_EXTRA_FUNC();
-	//CvUnit* pTrap = NULL;
 
-	if (pAttacker == NULL)
+	if (!pAttacker)
 	{
 		return;
 	}
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		if (!pLoopUnit->isDead() && pLoopUnit->isArmedTrap() && pLoopUnit->isEnemy(pAttacker->getTeam(), this, pAttacker) && pLoopUnit->isTriggerBeforeAttack())
+		if (unitX->isArmedTrap()
+		&& !unitX->isDead()
+		&&  unitX->isEnemy(pAttacker->getTeam(), this, pAttacker)
+		&&  unitX->isTriggerBeforeAttack()
+		&& !unitX->canUnitCoexistWithArrivingUnit(*pAttacker))
 		{
-			if (NULL == pAttacker || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
-			{
-				pLoopUnit->doTrap(pAttacker);
-			}
+			unitX->doTrap(pAttacker);
 		}
 	}
 }
@@ -13192,37 +13181,25 @@ const CvProperties* CvPlot::getPropertiesConst() const
 
 bool CvPlot::HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const
 {
-	if ( m_iCachePathEpoch == m_iGlobalCachePathEpoch )
+	if (m_iCachePathEpoch == m_iGlobalCachePathEpoch)
 	{
-		if ( bIsAlternateResult )
+		if (bIsAlternateResult)
 		{
-			if ( m_cachedPathAlternateValidityEntity == entity )
+			if (m_cachedPathAlternateValidityEntity == entity)
 			{
 				cachedResult = m_cachedPathAlternateValidity;
 				return true;
 			}
-			else
-			{
-				return false;
-			}
+			return false;
 		}
-		else
+		else if (m_cachedPathValidityEntity == entity)
 		{
-			if ( m_cachedPathValidityEntity == entity )
-			{
-				cachedResult = m_cachedPathValidity;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			cachedResult = m_cachedPathValidity;
+			return true;
 		}
-	}
-	else
-	{
 		return false;
 	}
+	return false;
 }
 
 void CvPlot::CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult)

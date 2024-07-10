@@ -538,9 +538,9 @@ public:
 
 	void doTurn();
 
-	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
+	void updateCombat(CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
 	void updateAirCombat(bool bQuick = false);
-	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
+	void updateAirStrike(CvPlot* pPlot, bool bFinish);
 
 	bool isActionRecommended(int iAction) const;
 
@@ -566,8 +566,7 @@ public:
 
 	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
-	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
-	//void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
+	void attack(CvPlot* pPlot, bool bStealth = false, bool bNoCache = false);
 	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
 	void move(CvPlot* pPlot, bool bShow);
 
@@ -883,7 +882,7 @@ public:
 	// Can this unit coexist with the specified team, on the specified plot?
 	bool canCoexistWithTeamOnPlot(const TeamTypes withTeam, const CvPlot& onPlot) const;
 	// Can this unit coexist with an attacking unit (possibly performing an assassination)?
-	bool canCoexistWithAttacker(const CvUnit& attacker, bool bAssassinate = false) const;
+	bool canCoexistWithAttacker(const CvUnit& attacker, bool bStealthDefend = false, bool bAssassinate = false) const;
 
 	// Checks for differing domains, transport status, amnesty game setting
 	// TODO: roll this into the other Coexist functions
@@ -907,9 +906,11 @@ public:
 	int currFirepower(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 	int currEffectiveStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
 
+	bool canAttackNow() const;
 	bool canAttack() const;
 	bool canAttack(const CvUnit& defender) const;
 	bool canDefend(const CvPlot* pPlot = NULL) const;
+	bool canStealthDefend(const CvUnit* victim) const;
 	bool canSiege(TeamTypes eTeam) const;
 
 	int airBaseCombatStr() const;
@@ -1484,8 +1485,6 @@ public:
 	bool isDelayedDeath() const;
 	bool doDelayedDeath();
 
-	bool isCombatFocus() const;
-
 	bool isBlockading() const;
 	void setBlockading(bool bNewValue);
 	void collectBlockadeGold();
@@ -1502,7 +1501,7 @@ public:
 
 	void setLeaderUnitType(UnitTypes leaderUnitType);
 
-	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bStealthAttack = false, bool bStealthDefense = false);
+	void setCombatUnit(CvUnit* pUnit, bool bAttacking = false, bool bQuick = true, bool bStealthAttack = false, bool bStealthDefense = false);
 	bool showSeigeTower(const CvUnit* pDefender) const; // K-Mod
 
 	CvUnit* getTransportUnit() const;
@@ -1998,7 +1997,6 @@ protected:
 	bool m_bMadeInterception;
 	bool m_bPromotionReady;
 	bool m_bDeathDelay;
-	bool m_bCombatFocus;
 	bool m_bInfoBarDirty;
 	bool m_bBlockading;
 	bool m_bAirCombat;
@@ -3013,6 +3011,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isCombat);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, isAnimal);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canFight);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canAttackNow);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, canDefend);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, alwaysInvisible);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, bool, IsSelected);

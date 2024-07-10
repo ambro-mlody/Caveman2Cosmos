@@ -922,6 +922,13 @@ class CvMainInterface:
 		screen.setStyle(btn, "Button_HUDSmall_Style")
 		screen.hide(btn)
 
+		btn = "ParallelMapsBtn"
+		artPath = CyArtFileMgr().getInterfaceArtInfo("BUG_WORLDWONDER_OFF").getPath()
+		x += dx
+		screen.setImageButton(btn, artPath, x, y, iSize, iSize, eWidGen, -1, -1)
+		screen.setStyle(btn, "Button_HUDSmall_Style")
+		screen.hide(btn)
+
 		btn = "DebugBtn0"
 		artPath = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_DEBUG_SCREEN_BUTTON").getPath()
 		x += dx
@@ -1605,6 +1612,7 @@ class CvMainInterface:
 				screen.hide("FoVSliderText")
 				screen.hide("FoVSlider")
 				screen.hide("BuildListBtn0")
+				screen.hide("ParallelMapsBtn")
 			else:
 				screen.show("InterfaceTopLeft")
 				screen.show("InterfaceTopCenter")
@@ -1633,6 +1641,8 @@ class CvMainInterface:
 					screen.hide("FoVSliderText")
 					screen.hide("FoVSlider")
 				screen.show("BuildListBtn0")
+				if GC.getNumMapsInitialized() > 1:
+					screen.show("ParallelMapsBtn")
 
 		elif IFT == InterfaceVisibility.INTERFACE_HIDE:
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1667,6 +1677,7 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 
 		elif IFT in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
@@ -1716,6 +1727,7 @@ class CvMainInterface:
 			screen.hide("FoVSliderText")
 			screen.hide("FoVSlider")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 			screen.hide("ResearchBar")
 			screen.hide("ResearchBarDC")
 			screen.hide("WID|TECH|ProgBar0")
@@ -1760,6 +1772,7 @@ class CvMainInterface:
 			screen.hide("OptionsBtnBUG0")
 			screen.hide("DebugBtn0")
 			screen.hide("BuildListBtn0")
+			screen.hide("ParallelMapsBtn")
 			if MainOpt.isShowFieldOfView():
 				screen.show("FoVSliderText")
 				screen.show("FoVSlider")
@@ -1775,6 +1788,9 @@ class CvMainInterface:
 			screen.hide("GreatPersonBar1")
 			screen.hide("GreatGeneralBar")
 			screen.hide("GreatGeneralBarText")
+
+	def showParallelMapsScreenButton(self):
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).show("ParallelMapsBtn")
 
 	def cleanPlotList(self, screen):
 		self.hidePlotList(screen)
@@ -4771,7 +4787,7 @@ class CvMainInterface:
 											scores.setWontTalk()
 										if bShowWorstEnemy and CyPlayer.getWorstEnemyName() == CyTeamAct.getName():
 											scores.setWorstEnemy()
-										if bShowWHEOOH and not bTeamAtWarWithYou and bWillingToTalk:
+										if bShowWHEOOH and not bTeamAtWarWithYou and bWillingToTalk and bHaveMetTeam:
 											TD = TradeData()
 											TD.ItemType = TradeableItems.TRADE_WAR
 											for iTeamX in xrange(MAX_PC_TEAMS):
@@ -5218,6 +5234,7 @@ class CvMainInterface:
 				szTxt += u"\n%s%s - %d%%" % (GPUtil.getUnitIcon(iUnit), GC.getUnitInfo(iUnit).getDescription(), iPercent)
 		self.updateTooltip(screen, szTxt)
 
+
 	def treasuryHelp(self, screen, szTxt):
 		player = self.CyPlayer
 		iconCommerceGold = self.iconCommerceList[0]
@@ -5225,10 +5242,12 @@ class CvMainInterface:
 		if player.isAnarchy():
 			self.updateTooltip(screen, szTxt)
 			return
+
 		# Treasury Upkeep
 		iValue = player.getTreasuryUpkeep()
 		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_KEY_TREASURY_UPKEEP", ()) + str(iValue) + iconCommerceGold
+
 		# Civics
 		iSum = 0
 		szTemp = ""
@@ -5240,10 +5259,16 @@ class CvMainInterface:
 				iSum += iValue
 		if iSum:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) +" " + str(iSum) + iconCommerceGold + szTemp
+
 		# Maintenance
 		iValue = player.getTotalMaintenance()
 		if iValue:
 			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
+
+		iValue = player.getCorporateMaintenance()
+		if iValue:
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CORPORATE_MAINTENANCE", ()) + " " + str(iValue) + iconCommerceGold
+
 		# Unit upkeep
 		iUnitUpkeep = player.getFinalUnitUpkeep()
 		iUnitSupply = player.calculateUnitSupply()
@@ -5255,6 +5280,7 @@ class CvMainInterface:
 					szTxt += "\n	" + str(iUnitSupply) + iconCommerceGold + " " + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY", ())
 			elif iUnitSupply:
 				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold
+
 		# Trade
 		iValue = player.getGoldPerTurn()
 		if iValue:
@@ -5265,6 +5291,7 @@ class CvMainInterface:
 				szTxt += "0,255,0>"
 			szTxt += str(iValue) + "</color>" + iconCommerceGold
 		self.updateTooltip(screen, szTxt)
+
 
 	def showRevStatusInfoPane(self, screen):
 		InCity = self.InCity
@@ -5647,6 +5674,9 @@ class CvMainInterface:
 			elif NAME == "BuildListBtn":
 				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_MISC_BUILD_LIST_SCREEN_HOVER", ()))
 
+			elif NAME == "ParallelMapsBtn":
+				self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_PARALLEL_MAPS_SCREEN_HOVER", ()))
+
 			elif NAME == "EraIndicator":
 				self.updateTooltip(screen, GC.getEraInfo(self.CyPlayer.getCurrentEra()).getDescription())
 
@@ -6009,6 +6039,9 @@ class CvMainInterface:
 
 			elif NAME == "BuildListBtn":
 				UP.showBuildListScreen()
+
+			elif NAME == "ParallelMapsBtn":
+				UP.showParallelMapsScreen()
 
 			elif NAME == "DebugBtn":
 				UP.showDebugScreen()

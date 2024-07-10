@@ -594,7 +594,7 @@ void CyCity::changePopulation(int iChange)
 	m_pCity->changePopulation(iChange);
 }
 
-int CyCity::getRealPopulation() const
+int64_t CyCity::getRealPopulation() const
 {
 	return m_pCity->getRealPopulation();
 }
@@ -1669,9 +1669,9 @@ void CyCity::setWeLoveTheKingDay(bool bWeLoveTheKingDay)
 	m_pCity->setWeLoveTheKingDay(bWeLoveTheKingDay);
 }
 
-int CyCity::calculateCorporateTaxes() const
+int64_t CyCity::calcCorporateMaintenance() const
 {
-	return m_pCity->calculateCorporateTaxes();
+	return m_pCity->calcCorporateMaintenance();
 }
 
 void CyCity::changePowerCount(int iChange)

@@ -91,6 +91,16 @@
 			<KFM/>
 			<Button>art/Seafood/Art/abalonediggers.dds</Button>
 		</BuildingArtInfo>
+        <BuildingArtInfo>
+            <Type>ART_DEF_BUILDING_CAVE_SHELTER</Type>
+            <LSystem/>
+            <bAnimated>0</bAnimated>
+            <fScale>0</fScale>
+            <fInterfaceScale>0</fInterfaceScale>
+            <NIF/>
+            <KFM/>
+            <Button>art/buttons/buildings/cave_icon.dds</Button>
+        </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ABATIS</Type>
 			<LSystem/>
@@ -25874,16 +25884,6 @@
 			<Button>Art/Interface/Buttons/Buildings/cage_marsupial.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_T_MARSUPIAL</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_koala.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARTIAN_ARCOLOGY</Type>
 			<LSystem>LSYSTEM_ARCOLOGY</LSystem>
 			<bAnimated>1</bAnimated>
@@ -31854,16 +31854,6 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicCatMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_thylacine.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALEONTOLOGY_LAB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -35874,6 +35864,16 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/docks.dds</Button>
 		</BuildingArtInfo>
+        <BuildingArtInfo>
+            <Type>ART_DEF_BUILDING_WATER_TROUGH</Type>
+            <LSystem/>
+            <bAnimated>0</bAnimated>
+            <fScale>0</fScale>
+            <fInterfaceScale>0</fInterfaceScale>
+            <NIF/>
+            <KFM/>
+            <Button>Art/Buttons/Buildings/water_trough.dds</Button>
+        </BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RIVER_RAFTING_DOCK</Type>
 			<LSystem/>
