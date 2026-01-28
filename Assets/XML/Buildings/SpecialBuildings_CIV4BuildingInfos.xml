@@ -1301,10 +1301,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1710,8 +1708,13 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -1824,8 +1827,13 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -1900,8 +1908,13 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -5458,13 +5471,27 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
+            <TechYieldChanges>
+                <TechYieldChange>
+                    <PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
+                    <TechYield>
+                        <iYield>800</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
+                    <TechYield>
+                        <iYield>900</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
+                    <TechYield>
+                        <iYield>800</iYield>
+                    </TechYield>
+                </TechYieldChange>
+            </TechYieldChanges>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_WEARABLE_COMPUTERS</TechType>
-					<CommercePercents>
-						<iCommercePercent>800</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIGITIZATION</TechType>
 					<CommercePercents>
@@ -5480,21 +5507,9 @@
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<TechType>TECH_AUTOMATED_TRAFFIC</TechType>
-					<CommercePercents>
-						<iCommercePercent>900</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>800</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_ONLINE_COMMUNITY</TechType>
-					<CommercePercents>
 						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
@@ -8927,10 +8942,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -9022,9 +9035,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9055,9 +9069,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9090,9 +9105,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9130,9 +9146,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9167,9 +9184,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9204,9 +9222,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9242,9 +9261,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9274,9 +9294,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9308,9 +9329,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9347,9 +9369,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9383,9 +9406,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9419,9 +9443,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9460,9 +9485,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>9</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9500,9 +9526,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>9</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9548,9 +9575,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>9</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9585,9 +9613,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9619,9 +9648,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9655,9 +9685,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9692,9 +9723,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9728,9 +9760,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9765,9 +9798,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9805,9 +9839,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>12</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9843,9 +9878,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>12</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9882,9 +9918,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>12</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9920,9 +9957,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9955,9 +9993,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9991,9 +10030,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -10031,9 +10071,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>8</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -10067,9 +10108,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -10105,9 +10147,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>8</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -11083,9 +11126,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<CommerceModifiers>
-				<iCommerce>6</iCommerce>
-			</CommerceModifiers>
+            <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>6</iYield>
+            </YieldModifiers>
 			<iAsset>3</iAsset>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -11110,9 +11155,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<CommerceModifiers>
-				<iCommerce>2</iCommerce>
-			</CommerceModifiers>
+            <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>2</iYield>
+            </YieldModifiers>
 			<iAsset>1</iAsset>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -11364,10 +11411,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11557,12 +11602,13 @@
 			<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalCommerceModifiers>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<GlobalYieldModifiers>
 				<iYield>5</iYield>
 				<iYield>10</iYield>
+				<iYield>2</iYield>
 			</GlobalYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
@@ -11592,11 +11638,11 @@
 				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>2</iCommerce>
+            </CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -13133,10 +13179,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14299,8 +14343,13 @@
 			</PrereqInCityBuildings>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -14467,10 +14516,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14619,10 +14666,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14728,8 +14773,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -14768,8 +14818,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<iHappiness>4</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>20</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>20</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
@@ -14810,8 +14865,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -14850,11 +14910,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14890,11 +14955,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14930,11 +15000,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14970,11 +15045,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15010,11 +15090,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15050,11 +15135,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15090,11 +15180,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15299,9 +15394,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -16122,10 +16218,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
