@@ -550,7 +550,9 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1253,7 +1255,9 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1301,9 +1305,11 @@
 				<iYield>3</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>4</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1364,9 +1370,11 @@
 				<iYield>3</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>4</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1404,7 +1412,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1501,9 +1511,11 @@
 				<iYield>3</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>4</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1949,7 +1961,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1994,9 +2008,11 @@
 				<iYield>3</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>4</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2035,7 +2051,9 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -2074,9 +2092,9 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>7</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -2115,7 +2133,9 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>6</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -2399,9 +2419,11 @@
 				<iYield>3</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>4</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2497,7 +2519,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>

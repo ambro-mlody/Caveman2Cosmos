@@ -491,7 +491,9 @@
 				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -741,12 +743,9 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<YieldChanges>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<bAutoBuild>1</bAutoBuild>
@@ -8854,11 +8853,8 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10331,11 +10327,8 @@
 			<iHealth>1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14369,7 +14362,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -14498,11 +14491,11 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
-			<PrereqBonuses>
-				<Bonus>BONUS_BAMBOO</Bonus>
-				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_PRIME_TIMBER</Bonus>
-			</PrereqBonuses>
+            <PrereqVicinityBonuses>
+                <VicinityBonus>BONUS_BAMBOO</VicinityBonus>
+                <VicinityBonus>BONUS_WOOD</VicinityBonus>
+                <VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
+            </PrereqVicinityBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_INSULAE</BuildingType>
@@ -14548,6 +14541,8 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
@@ -15457,6 +15452,9 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
@@ -15951,11 +15949,8 @@
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>

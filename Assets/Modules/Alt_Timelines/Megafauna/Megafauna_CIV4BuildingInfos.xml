@@ -281,7 +281,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -389,7 +389,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -496,7 +496,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -603,7 +603,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -709,7 +709,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -847,7 +847,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -943,7 +943,7 @@
 				<BuildingType>BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</BuildingType>
 			</ReplacementBuildings>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -959,7 +959,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iRevIdxLocal>-1</iRevIdxLocal>
@@ -1035,7 +1035,7 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -1165,7 +1165,7 @@
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
 			<iCostComplexityModifier>2</iCostComplexityModifier>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<iMaxLatitude>45</iMaxLatitude>
 			<iAsset>4</iAsset>
