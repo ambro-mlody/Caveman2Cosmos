@@ -4831,28 +4831,6 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENT_WORLD_PIRATES_OF_THE_NEUTRAL_ZONES</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>25</iWeight>
-			<Events>
-				<Event>EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_1</Event>
-				<Event>EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_2</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canTriggerPiratesoftheNeutralZones</PythonCanDo>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MALACCAN_PIRATES</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENT_WORLD_MALACCAN_PIRATES</Text>
@@ -7575,6 +7553,28 @@
                 <PrereqTech>TECH_SCAVENGING</PrereqTech>
             </OrPreReqs>
             <bRecurring>1</bRecurring>
+        </EventTriggerInfo>
+
+        <EventTriggerInfo>
+            <Type>EVENTTRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Type>
+            <WorldNewsTexts>
+                <Text>TXT_KEY_EVENT_WORLD_PIRATES_OF_THE_NEUTRAL_ZONES</Text>
+            </WorldNewsTexts>
+            <TriggerTexts>
+                <TriggerText>
+                    <Text>TXT_KEY_EVENT_TRIGGER_PIRATES_OF_THE_NEUTRAL_ZONES</Text>
+                    <Era>NONE</Era>
+                </TriggerText>
+            </TriggerTexts>
+            <iPercentGamesActive>100</iPercentGamesActive>
+            <iWeight>25</iWeight>
+            <Events>
+                <Event>EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_1</Event>
+                <Event>EVENT_PIRATES_OF_THE_NEUTRAL_ZONES_2</Event>
+            </Events>
+            <bRecurring>1</bRecurring>
+            <bShowPlot>0</bShowPlot>
+            <PythonCanDo>canTriggerPiratesoftheNeutralZones</PythonCanDo>
         </EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -11127,7 +11127,7 @@
 				<FeatureType>NONE</FeatureType>
 			</FeaturesRequired>
 			<Events>
-				<Event>EVENT_FOUND_CLAM</Event>
+				<Event>EVENT_FOUND_MUREX</Event>
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_FISHING</PrereqTech>

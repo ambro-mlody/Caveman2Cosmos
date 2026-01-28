@@ -13125,6 +13125,10 @@
 		<French>Nous avons trouvé du sucre, c'est sucré.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_KAVA_1</Tag>
+        <English>We have found kava, time start trading.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COCA_1</Tag>
         <English>We have found coca, time to earn money.</English>
 		<French>Nous avons trouvé de la coca, il est temps de gagner de l'argent.</French>
