@@ -205,7 +205,7 @@
 				<Type>HERITAGE_FOLKLORE_ANTEATER</Type>
 				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
 			</PrereqOrHeritage>
-			<iCost>70</iCost>
+			<iCost>72</iCost>
 			<iCostSizeModifier>0</iCostSizeModifier>
 			<iCostCountModifier>2</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -537,7 +537,7 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>92</iCost>
+			<iCost>134</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -1154,7 +1154,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<iCost>184</iCost>
+			<iCost>250</iCost>
 			<iCostSizeModifier>0</iCostSizeModifier>
 			<iCostCountModifier>2</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -1587,7 +1587,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
-			<iCost>120</iCost>
+			<iCost>126</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -2217,7 +2217,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_DONKEY</ArtDefineTag>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
-			<iCost>92</iCost>
+			<iCost>134</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -2535,7 +2535,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>184</iCost>
+			<iCost>250</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -2593,7 +2593,7 @@
 				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>184</iCost>
+			<iCost>250</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -3355,7 +3355,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>184</iCost>
+			<iCost>250</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>

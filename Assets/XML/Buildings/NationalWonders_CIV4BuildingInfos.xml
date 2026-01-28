@@ -288,7 +288,7 @@
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
-			<iCost>148</iCost>
+			<iCost>160</iCost>
 			<iCostSizeModifier>2</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -622,7 +622,7 @@
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>184</iCost>
+			<iCost>320</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -1078,7 +1078,7 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<iCost>160</iCost>
+			<iCost>172</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -1747,7 +1747,7 @@
 				<Bonus>BONUS_DONKEY</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>184</iCost>
+			<iCost>264</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -1880,7 +1880,7 @@
 				<Bonus>BONUS_ELEPHANTS</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>184</iCost>
+			<iCost>432</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -2016,7 +2016,7 @@
 				<BuildingType>BUILDING_EFFECT_FERTILITY_FESTIVAL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
-			<iCost>172</iCost>
+			<iCost>184</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -2340,7 +2340,7 @@
 				<BuildingType>BUILDING_CHARCOAL_BURNER</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
-			<iCost>112</iCost>
+			<iCost>120</iCost>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -2386,7 +2386,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>468</iCost>
+			<iCost>486</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>2</iCostMaterialsModifier>
@@ -4024,7 +4024,7 @@
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>184</iCost>
+			<iCost>264</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -4421,7 +4421,7 @@
 				<Bonus>BONUS_LLAMA</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<iCost>184</iCost>
+			<iCost>320</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>

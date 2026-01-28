@@ -3896,7 +3896,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>876</iCost>
+			<iCost>1038</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -4211,7 +4211,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_CHEOMSEONGDAE</ObsoletesToBuilding>
-			<iCost>876</iCost>
+			<iCost>1038</iCost>
 			<iCostSizeModifier>2</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -4311,7 +4311,7 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_RELIC_CHICHEN_ITZA</ObsoletesToBuilding>
-			<iCost>876</iCost>
+			<iCost>1038</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -6577,7 +6577,7 @@
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>516</iCost>
+			<iCost>570</iCost>
 			<iCostSizeModifier>2</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -7289,7 +7289,7 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_EMU</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>408</iCost>
+			<iCost>516</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -7880,7 +7880,7 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-			<iCost>1404</iCost>
+			<iCost>1458</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -8075,7 +8075,7 @@
 				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>516</iCost>
+			<iCost>570</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -10200,7 +10200,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>1404</iCost>
+			<iCost>1458</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -12782,7 +12782,7 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>876</iCost>
+			<iCost>1038</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -12848,7 +12848,7 @@
 				<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
-			<iCost>270</iCost>
+			<iCost>300</iCost>
 			<iCostSizeModifier>2</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>2</iCostMaterialsModifier>
@@ -14109,7 +14109,7 @@
 				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>516</iCost>
+			<iCost>570</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -14642,7 +14642,7 @@
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
-			<iCost>876</iCost>
+			<iCost>1038</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
@@ -19642,14 +19642,11 @@
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MERCANTILISM</ObsoleteTech>
-			<iCost>1350</iCost>
+			<iCost>1404</iCost>
 			<iCostSizeModifier>3</iCostSizeModifier>
 			<iCostCountModifier>1</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
 			<iCostComplexityModifier>1</iCostComplexityModifier>
-			<CommerceModifiers>
-				<iCommerce>25</iCommerce>
-			</CommerceModifiers>
             <YieldModifiers>
                 <iYield>0</iYield>
                 <iYield>0</iYield>
@@ -19873,7 +19870,7 @@
 				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<iCost>516</iCost>
+			<iCost>570</iCost>
 			<iCostSizeModifier>1</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>0</iCostMaterialsModifier>
@@ -24107,7 +24104,7 @@
 				<BuildingType>BUILDING_MODERN_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<iCost>516</iCost>
+			<iCost>570</iCost>
 			<iCostSizeModifier>2</iCostSizeModifier>
 			<iCostCountModifier>0</iCostCountModifier>
 			<iCostMaterialsModifier>1</iCostMaterialsModifier>
