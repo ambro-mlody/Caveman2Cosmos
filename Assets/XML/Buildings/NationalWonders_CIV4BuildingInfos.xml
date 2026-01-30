@@ -8408,46 +8408,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WEMBLEY_STADIUM</Type>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_WEMBLEY_STADIUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WEMBLEY_STADIUM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_WEMBLEY_STADIUM_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY_STADIUM</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_WEMBLEY</MovieDefineTag>
-			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
-			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<bNukeImmune>1</bNukeImmune>
-			<iCost>2820</iCost>
-			<iCostSizeModifier>3</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>1</iCostMaterialsModifier>
-			<iCostComplexityModifier>1</iCostComplexityModifier>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iHappiness>2</iHappiness>
-			<iAsset>10</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
-			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_WORLD_BANK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
