@@ -5185,12 +5185,12 @@ def _doEarthquakeCore(argsList, minDestroy, maxDestroy, popLossPercent):
         if popLossPercent > 0:
             currentPop = CyCity.getPopulation()
             if currentPop > 1: # only apply if city has more than 1 pop
-                popLoss = max(1, int(currentPop * popLossPercent / 100))
+                popLoss = int(currentPop * popLossPercent / 100)
 
                 # don’t kill the city—make sure at least 1 pop survives
-                popLoss = min(popLoss, currentPop - 1)
-
-                CyCity.changePopulation(-popLoss)
+                if popLoss >= 1:
+                    popLoss = min(popLoss, currentPop - 1)
+                    CyCity.changePopulation(-popLoss)
 
 
 ####### Assassin Discovered #######

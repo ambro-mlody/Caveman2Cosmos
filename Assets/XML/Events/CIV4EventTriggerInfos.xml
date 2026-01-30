@@ -13667,11 +13667,11 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1</iWeight>
+            <iWeight>5</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
-                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+                <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
             <Events>
                 <Event>EVENT_SMALL_EARTHQUAKE_1</Event>
@@ -13692,11 +13692,11 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1</iWeight>
+            <iWeight>4</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
-                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+                <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
             <Events>
                 <Event>EVENT_MEDIUM_EARTHQUAKE_1</Event>
@@ -13717,11 +13717,11 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1</iWeight>
+            <iWeight>3</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
-                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+                <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
             <Events>
                 <Event>EVENT_STRONG_EARTHQUAKE_1</Event>
@@ -13742,11 +13742,11 @@
             </TriggerTexts>
             <EventArt>Art/Event_Images/Earthquake.dds</EventArt>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1</iWeight>
+            <iWeight>2</iWeight>
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
-                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+                <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
             <Events>
                 <Event>EVENT_HUGE_EARTHQUAKE_1</Event>
@@ -13771,7 +13771,7 @@
             <bPickCity>1</bPickCity>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <AndPreReqs>
-                <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+                <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
             </AndPreReqs>
             <Events>
                 <Event>EVENT_APOCALYPTIC_EARTHQUAKE_1</Event>
