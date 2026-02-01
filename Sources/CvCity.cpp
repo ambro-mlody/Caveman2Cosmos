@@ -11088,22 +11088,27 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
                    }
            }
 
-            int iVicinityCount = 0;
-            for (int i = 0; i < NUM_CITY_PLOTS; ++i)
-            {
-                CvPlot* pPlot = getCityIndexPlot(i);
-                if (pPlot != NULL
-                    && pPlot->getBonusType(getTeam()) == (BonusTypes)iI
-                    && pPlot->getOwner() == getOwner() // city must own the plot
-                    && pPlot->getImprovementType() != NO_IMPROVEMENT// must be developed
-                    && pPlot->isConnectedTo(this)
-                    && pPlot->getWorkingCity() == this)
-                {
-                    ++iVicinityCount;
-                }
-            }
+           if (building.getVicinityBonusYieldChanges(iI, eIndex) != 0
+               && hasVicinityBonus((BonusTypes)iI))
+           {
+               int iVicinityCount = 0;
+               for (int i = 0; i < NUM_CITY_PLOTS; ++i)
+               {
+                   CvPlot* pPlot = getCityIndexPlot(i);
+                   if (pPlot != NULL
+                       && pPlot->getBonusType(getTeam()) == (BonusTypes)iI
+                       && pPlot->getOwner() == getOwner()
+                       && pPlot->getImprovementType() != NO_IMPROVEMENT
+                       && pPlot->isConnectedTo(this)
+                       && pPlot->getWorkingCity() == this)
+                   {
+                       ++iVicinityCount;
+                   }
+               }
 
-            iExtraYield += iVicinityCount * building.getVicinityBonusYieldChanges(iI, eIndex);
+               iExtraYield += iVicinityCount * building.getVicinityBonusYieldChanges(iI, eIndex);
+           }
+
        }
         else
         {
@@ -11112,9 +11117,25 @@ int CvCity::getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes e
                 iExtraYield += building.getBonusYieldChanges(iI, eIndex);
             }
 
-            if (building.getVicinityBonusYieldChanges(iI, eIndex) != 0 && hasVicinityBonus((BonusTypes)iI))
+            if (building.getVicinityBonusYieldChanges(iI, eIndex) != 0
+               && hasVicinityBonus((BonusTypes)iI))
             {
-                iExtraYield += building.getVicinityBonusYieldChanges(iI, eIndex);
+               int iVicinityCount = 0;
+               for (int i = 0; i < NUM_CITY_PLOTS; ++i)
+               {
+                   CvPlot* pPlot = getCityIndexPlot(i);
+                   if (pPlot != NULL
+                       && pPlot->getBonusType(getTeam()) == (BonusTypes)iI
+                       && pPlot->getOwner() == getOwner()
+                       && pPlot->getImprovementType() != NO_IMPROVEMENT
+                       && pPlot->isConnectedTo(this)
+                       && pPlot->getWorkingCity() == this)
+                   {
+                       ++iVicinityCount;
+                   }
+               }
+
+               iExtraYield += iVicinityCount * building.getVicinityBonusYieldChanges(iI, eIndex);
             }
         }
     }
