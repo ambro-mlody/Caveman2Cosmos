@@ -13978,7 +13978,7 @@ bool CvUnit::isWaiting() const
 
 bool CvUnit::isFortifyable() const
 {
-	if (!canFight() || noDefensiveBonus() || ((getDomainType() != DOMAIN_LAND) && (getDomainType() != DOMAIN_IMMOBILE)))
+	if (!canFight() || isAnimal() || noDefensiveBonus() || ((getDomainType() != DOMAIN_LAND) && (getDomainType() != DOMAIN_IMMOBILE)))
 	{
 		return false;
 	}
