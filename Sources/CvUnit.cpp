@@ -1836,6 +1836,33 @@ void CvUnit::doTurn()
 		}
 	}
 
+	CvPlot* pPlot = plot();
+    CvCity* pCity = pPlot->getPlotCity();
+
+    if (pCity != NULL && pCity->getOwner() == getOwner())
+    {
+        // Unit is standing in a city owned by its player
+        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
+        {
+            if (isHasPromotion((PromotionTypes)iPromotion))
+            {
+                PromotionLineTypes eLine = GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
+                if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_TEACH"))
+                {
+                    // Give passive XP
+                    changeExperience100(10);
+                    break;
+                }
+                if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_DISEASE_CONTROL"))
+                {
+                    // Give passive XP
+                    changeExperience100(10);
+                    break;
+                }
+            }
+        }
+    }
+
 	if (baseCombatStr() > 0)
 	{
 		if (plot()->getFeatureTurnDamage() != 0)
