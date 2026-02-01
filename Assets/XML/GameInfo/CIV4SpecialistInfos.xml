@@ -242,7 +242,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</Commerces>
-			<iHealthPercent>100</iHealthPercent>
+			<iHealthPercent>150</iHealthPercent>
 			<UnitCombatExperienceTypes>
 				<UnitCombatExperienceType>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
@@ -777,7 +777,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</Commerces>
-			<iHealthPercent>200</iHealthPercent>
+			<iHealthPercent>300</iHealthPercent>
 			<UnitCombatExperienceTypes>
 				<UnitCombatExperienceType>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>

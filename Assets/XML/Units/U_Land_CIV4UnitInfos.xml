@@ -46821,7 +46821,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>80</Constant>
+										<Constant>60</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>

@@ -3016,6 +3016,10 @@
 			<BonusesRequired>
 				<BonusType>BONUS_HORSE</BonusType>
 			</BonusesRequired>
+            <UnitsRequired>
+                <UnitType>UNIT_HORSEMAN</UnitType>
+            </UnitsRequired>
+            <iNumUnits>3</iNumUnits>
 			<RoutesRequired>
 				<RouteType>ROUTE_TRAIL</RouteType>
 				<RouteType>ROUTE_PATH</RouteType>
@@ -6333,7 +6337,7 @@
 				<Event>EVENT_HORSE_WHISPERING_1</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</OrPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>

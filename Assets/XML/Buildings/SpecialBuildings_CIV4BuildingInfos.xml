@@ -152,7 +152,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-2</iHealth>
+			<iHealth>-3</iHealth>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -485,7 +485,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -4902,6 +4902,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-5</iHealth>
+            <iHealthPercentPerPopulation>-75</iHealthPercentPerPopulation>
 			<iHappiness>-6</iHappiness>
 			<YieldModifiers>
 				<iYield>-5</iYield>
@@ -4933,6 +4934,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-3</iHealth>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<iHappiness>-4</iHappiness>
 			<YieldModifiers>
 				<iYield>-3</iYield>
@@ -4960,6 +4962,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-5</iHealth>
+            <iHealthPercentPerPopulation>-50</iHealthPercentPerPopulation>
 			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>-5</iYield>
@@ -4996,6 +4999,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-1</iHealth>
+            <iHealthPercentPerPopulation>-5</iHealthPercentPerPopulation>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -5015,6 +5019,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iHealth>-4</iHealth>
+            <iHealthPercentPerPopulation>-40</iHealthPercentPerPopulation>
 			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>-4</iYield>
@@ -5052,6 +5057,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-2</iHealth>
+            <iHealthPercentPerPopulation>-50</iHealthPercentPerPopulation>
 			<iHappiness>-3</iHappiness>
 			<YieldModifiers>
 				<iYield>-2</iYield>
@@ -5089,6 +5095,7 @@
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<iHealth>-6</iHealth>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<iHappiness>-7</iHappiness>
 			<YieldModifiers>
 				<iYield>-6</iYield>
@@ -5142,6 +5149,7 @@
 			<ObsoleteTech>TECH_REGENERATIVE_MEDICINE</ObsoleteTech>
 			<iHealth>-9</iHealth>
 			<iHappiness>-9</iHappiness>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>-9</iYield>
 				<iYield>-10</iYield>
@@ -5172,6 +5180,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-7</iHealth>
+            <iHealthPercentPerPopulation>-60</iHealthPercentPerPopulation>
 			<iHappiness>-7</iHappiness>
 			<YieldModifiers>
 				<iYield>-7</iYield>
@@ -5199,6 +5208,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-4</iHealth>
+            <iHealthPercentPerPopulation>-65</iHealthPercentPerPopulation>
 			<iHappiness>-4</iHappiness>
 			<YieldModifiers>
 				<iYield>-4</iYield>
@@ -5230,6 +5240,7 @@
 			<iPrereqPopulation>2</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-10</iHealth>
+            <iHealthPercentPerPopulation>-100</iHealthPercentPerPopulation>
 			<iHappiness>-10</iHappiness>
 			<YieldModifiers>
 				<iYield>-10</iYield>
@@ -5257,6 +5268,7 @@
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-2</iHealth>
+            <iHealthPercentPerPopulation>-40</iHealthPercentPerPopulation>
 			<iHappiness>-2</iHappiness>
 			<YieldModifiers>
 				<iYield>-2</iYield>
@@ -5283,6 +5295,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iHealth>-1</iHealth>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<iHappiness>-2</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -5308,6 +5321,7 @@
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_ANTIBIOTICS</ObsoleteTech>
 			<iHealth>-8</iHealth>
+            <iHealthPercentPerPopulation>-70</iHealthPercentPerPopulation>
 			<iHappiness>-8</iHappiness>
 			<YieldModifiers>
 				<iYield>-8</iYield>
@@ -5336,6 +5350,7 @@
 			<Bonus>BONUS_PIG</Bonus>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-3</iHealth>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<iHappiness>-3</iHappiness>
 			<YieldModifiers>
 				<iYield>-3</iYield>
@@ -5363,6 +5378,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-6</iHealth>
+            <iHealthPercentPerPopulation>-50</iHealthPercentPerPopulation>
 			<iHappiness>-6</iHappiness>
 			<YieldModifiers>
 				<iYield>-6</iYield>
@@ -8719,7 +8735,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -8850,7 +8866,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -8996,7 +9012,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-2</iHealth>
+			<iHealth>-5</iHealth>
 			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -9176,7 +9192,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
@@ -10981,7 +10997,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11400,7 +11416,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -14505,7 +14521,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -14535,7 +14551,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -14657,7 +14673,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -15446,7 +15462,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -15469,7 +15485,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HOUSING_TREE_HOLLOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSING_TREE_HOLLOW_PEDIA</Civilopedia>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<PrereqOrFeature>
@@ -15946,7 +15962,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>

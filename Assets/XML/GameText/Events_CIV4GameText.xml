@@ -14721,6 +14721,10 @@
 		<French>Des plongeurs ont repéré une nouvelle source de homards.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_PEARLS_1</Tag>
+        <English>Divers have spotted a new source of pearls.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_FOUND_FISH_1</Tag>
         <English>Sailors have spotted a new source of fish.</English>
 		<French>Des marins ont repéré une nouvelle source de poissons.</French>
