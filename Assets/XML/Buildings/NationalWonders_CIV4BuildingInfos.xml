@@ -718,7 +718,6 @@
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
-				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EARTH_OVEN</ObsoleteTech>
 			<iCost>40</iCost>

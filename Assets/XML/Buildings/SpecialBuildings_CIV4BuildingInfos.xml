@@ -2267,7 +2267,7 @@
 				<Bonus>BONUS_CAT</Bonus>
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>4</iInsidiousness>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<PropertyManipulators>
@@ -2326,6 +2326,7 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-3</iCommerce>
 			</CommerceModifiers>
@@ -2418,7 +2419,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_BLACKMAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BLACKMAIL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>-3</iCommerce>
 			</CommerceModifiers>
@@ -2450,6 +2451,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>-10</iYield>
@@ -2533,6 +2535,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BRIBERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2568,6 +2571,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BURGLARY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -2700,6 +2704,7 @@
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iHealth>-3</iHealth>
 			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -2740,6 +2745,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -2767,7 +2773,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CHILD_LABOR_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHealth>-1</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-5</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -2799,6 +2806,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CORRUPTION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -2836,7 +2844,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_COUNTERFEITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_COUNTERFEITING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BANKING</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -2908,7 +2916,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_DOMESTIC_VIOLENCE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iHealth>-1</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<iInsidiousness>4</iInsidiousness>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<UnitCombatFreeExperiences>
@@ -2931,6 +2939,7 @@
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-15</iCommerce>
 			</CommerceModifiers>
@@ -2970,6 +2979,8 @@
 			<Bonus>BONUS_DRUGS</Bonus>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3008,8 +3019,10 @@
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<iHealth>-1</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -3026,8 +3039,8 @@
 			<Description>TXT_KEY_BUILDING_CRIME_ELDER_ABUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ELDER_ABUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
-			<iHealth>-3</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHealth>-4</iHealth>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>2</iInsidiousness>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<PropertyManipulators>
@@ -3050,6 +3063,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EMBEZZLEMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<iHappiness>-1</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -3103,7 +3117,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_EXTORTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EXTORTION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
@@ -3134,7 +3148,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FALSE_ACCUSATIONS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ORATORY</PrereqTech>
 			<iHealth>-1</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>4</iInsidiousness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -3156,6 +3170,8 @@
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<iHealth>-1</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<iInsidiousness>2</iInsidiousness>
 			<iRevIdxLocal>20</iRevIdxLocal>
 			<UnitCombatFreeExperiences>
@@ -3183,7 +3199,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_FORGERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FORGERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -3208,6 +3224,8 @@
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHealth>-5</iHealth>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-20</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3247,6 +3265,8 @@
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-40</iHealthPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-10</iCommerce>
 			</CommerceModifiers>
@@ -3353,6 +3373,8 @@
 			<Bonus>BONUS_FIREARMS</Bonus>
 			<iHealth>-3</iHealth>
 			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<iInsidiousness>4</iInsidiousness>
 			<iRevIdxLocal>60</iRevIdxLocal>
 			<UnitCombatFreeExperiences>
@@ -3384,7 +3406,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3456,6 +3478,8 @@
 			</UnitCombatFreeExperiences>
 			<iHealth>-4</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-30</iHealthPercentPerPopulation>
 			<iRevIdxLocal>50</iRevIdxLocal>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3481,7 +3505,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_IDENTITY_THEFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_IDENTITY_THEFT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -3524,7 +3548,8 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iInsidiousness>20</iInsidiousness>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-35</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3661,6 +3686,8 @@
 				<BuildingType>BUILDING_ALCATRAZ</BuildingType>
 			</PrereqOrBuildings>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<iInsidiousness>15</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -3751,8 +3778,10 @@
 			<Description>TXT_KEY_BUILDING_CRIME_LOOTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LOOTING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHealth>-3</iHealth>
-			<iHappiness>-3</iHappiness>
+			<iHealth>-5</iHealth>
+			<iHappiness>-5</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-20</iHealthPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>-10</iYield>
 				<iYield>-20</iYield>
@@ -3798,7 +3827,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_LYING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LYING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>1</iInsidiousness>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3851,6 +3880,8 @@
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-30</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3915,6 +3946,7 @@
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3956,7 +3988,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_MONEY_LAUNDERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MONEY_LAUNDERING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CORPORATION</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
@@ -3983,8 +4015,9 @@
 			<Description>TXT_KEY_BUILDING_CRIME_MUGGING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MUGGING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<iHealth>-3</iHealth>
+			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -4019,6 +4052,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MURDER_PEDIA</Civilopedia>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4051,8 +4086,10 @@
 			<Description>TXT_KEY_BUILDING_CRIME_ORGAN_TRAFFICKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ORGAN_TRAFFICKING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
-			<iHealth>-4</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHealth>-6</iHealth>
+			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-20</iHealthPercentPerPopulation>
 			<iInsidiousness>8</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4122,8 +4159,8 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<iHealth>-4</iHealth>
-			<iHappiness>-4</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-10</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -4216,6 +4253,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RACKETEERING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>-5</iYield>
@@ -4252,6 +4290,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RAPE_PEDIA</Civilopedia>
 			<iHealth>-4</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<iInsidiousness>8</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4286,6 +4326,8 @@
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iHealth>-8</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-35</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>-10</iYield>
 				<iYield>-20</iYield>
@@ -4329,6 +4371,7 @@
 			<Bonus>BONUS_FIREARMS</Bonus>
 			<iHealth>-5</iHealth>
 			<iHappiness>-8</iHappiness>
+            <iHappinessPercentPerPopulation>-50</iHappinessPercentPerPopulation>
 			<iInsidiousness>2</iInsidiousness>
 			<iRevIdxLocal>100</iRevIdxLocal>
 			<PropertyManipulators>
@@ -4390,7 +4433,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_SEXUAL_HARASSMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SEXUAL_HARASSMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<iInsidiousness>1</iInsidiousness>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4411,7 +4454,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_SHOPLIFTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SHOPLIFTING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
@@ -4521,7 +4564,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SOLICITING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iHealth>-2</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>2</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
@@ -4620,6 +4663,8 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-35</iHealthPercentPerPopulation>
 			<iInsidiousness>3</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4728,7 +4773,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_VIGILANTISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_VIGILANTISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4773,8 +4818,8 @@
 			<Description>TXT_KEY_BUILDING_CRIME_WEAPONS_TRAFFICKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_WEAPONS_TRAFFICKING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
-			<iHealth>-4</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHealth>-5</iHealth>
+			<iHappiness>-3</iHappiness>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iInsidiousness>10</iInsidiousness>
 			<iRevIdxLocal>50</iRevIdxLocal>
@@ -4824,6 +4869,8 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iInsidiousness>1</iInsidiousness>
 			<iHappiness>-1</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>-5</iYield>
@@ -15598,6 +15645,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
 			<iInsidiousness>5</iInsidiousness>
 			<iRevIdxLocal>1</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_THIEF</PropertySpawnUnit>
@@ -15621,6 +15669,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<iInsidiousness>7</iInsidiousness>
 			<iRevIdxLocal>2</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_ROGUE</PropertySpawnUnit>
@@ -15644,6 +15693,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-3</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<iInsidiousness>15</iInsidiousness>
 			<iRevIdxLocal>3</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_BURGLAR</PropertySpawnUnit>
@@ -15669,6 +15719,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
 			<iInsidiousness>30</iInsidiousness>
 			<PropertySpawnUnit>UNIT_HACKER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
@@ -15698,6 +15749,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-35</iHappinessPercentPerPopulation>
 			<iInsidiousness>20</iInsidiousness>
 			<iEspionageDefense>-5</iEspionageDefense>
 			<iRevIdxLocal>20</iRevIdxLocal>
@@ -15727,6 +15779,7 @@
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<iInsidiousness>2</iInsidiousness>
 			<PropertySpawnUnit>UNIT_CUTTHROAT</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
@@ -15752,6 +15805,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_TOBACCO</BonusType>
@@ -15802,6 +15856,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<iInsidiousness>25</iInsidiousness>
 			<PropertySpawnUnit>UNIT_BIKER_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>

@@ -1853,7 +1853,7 @@ void CvUnit::doTurn()
                     changeExperience100(10);
                     break;
                 }
-                if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_DISEASE_CONTROL"))
+                if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_DISEASE_CONTROL"))
                 {
                     // Give passive XP
                     changeExperience100(10);

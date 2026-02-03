@@ -4753,21 +4753,25 @@ def canTriggerSailingFounded(argsList):
 ######## Chariotry founded ############
 
 def canTriggerChariotryFounded(argsList):
-	ePlayer = argsList[1]
-	iCity = argsList[2]
+    iStable = GC.getInfoTypeForString("BUILDING_STABLE")
+    ePlayer = argsList[1]
+    iCity = argsList[2]
 
-	city = GC.getPlayer(ePlayer).getCity(iCity)
+    city = GC.getPlayer(ePlayer).getCity(iCity)
 
-	if city is None:
-		return False
+    if city is None:
+        return False
 
-	if city.plot().getLatitude() <= 0:
-		return False
+    if city.plot().getLatitude() <= 0:
+        return False
 
-	if city.getNumBonuses(GC.getInfoTypeForString("BONUS_HORSE")) < 1:
-		return False
+    if city.getNumBonuses(GC.getInfoTypeForString("BONUS_HORSE")) < 1:
+        return False
 
-	return True
+    if city.hasBuilding(iStable):
+        return False
+
+    return True
 
 ######## MERCENARIES ANCIENT ###########
 
@@ -5033,6 +5037,8 @@ def applyMercenariesMedieval2(argsList):
 		CyUnit = GC.getPlayer(data.ePlayer).initUnit(iUnit, x, y, UnitAITypes.UNITAI_ATTACK_CITY, DirectionTypes.DIRECTION_SOUTH)
 		CyUnit.setName("Mercenary Warrior")
 		iCount -= 1
+
+######## CHARIOTRY ###########
 
 ######## EARTHQUAKE ###########
 
